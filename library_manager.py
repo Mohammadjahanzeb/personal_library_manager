@@ -4,9 +4,10 @@ import json
 # Load & save library data
 def load_library():
     try:
-        with open("library.json", "r") as file:  # Fixed filename
-            return json.load(file)
-    except FileNotFoundError:
+        with open("library.json", "r") as file:
+            content = file.read().strip()  # Remove extra spaces/newlines
+            return json.loads(content) if content else []  # Return empty list if file is empty
+    except (FileNotFoundError, json.JSONDecodeError):  # Handle missing or corrupt file
         return []
 
 def save_library():
