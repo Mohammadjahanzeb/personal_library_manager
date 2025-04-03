@@ -41,7 +41,7 @@ elif menu == "Add Book":
         st.rerun()
 
 #remove book
-elif menu == "Remove Book"
+elif menu == "Remove Book":
     st.sidebar("Remove a book")
     book_titles = [book['title'] for book in library]
 
