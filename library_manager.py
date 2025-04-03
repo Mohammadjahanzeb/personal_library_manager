@@ -64,7 +64,7 @@ elif menu == "Search Book":
         results = [book for book in library if search_term.lover() in book["title"].lower() or search_term.loweer() in book["author"].lower()]
         if results:
             st.table(results)
-        else
+        else:
             st.warning("No book found!")
 
 #save and exit
