@@ -1,5 +1,5 @@
-pip install streamlit
-pip install pandas
-pip install rich
-pip install markdown-it-py
-pip install pygments
+streamlit==1.44.1
+pandas==2.2.3
+rich==14.0.0
+markdown-it-py==3.0.0
+pygments==2.19.1
