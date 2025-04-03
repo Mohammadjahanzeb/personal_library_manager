@@ -52,7 +52,7 @@ elif menu == "Remove Book":
             save_library
             st.success("Book removed successfully!")
             st.rerun()
-    else
+    else:
         st.warning("No book in your library. Add some books")
 
 #search book
