@@ -42,7 +42,7 @@ elif menu == "Add Book":
 
 #remove book
 elif menu == "Remove Book":
-    st.sidebar("Remove a book")
+    st.sidebar.text("Remove a book")
     book_titles = [book['title'] for book in library]
 
     if book_titles:
