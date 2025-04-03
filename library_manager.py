@@ -17,7 +17,7 @@ def save_library():
 library = load_library()
 
 st.title("Personal Library Manager")
-menu = st.sidebar.radio("Select an option",["View Library","Add Book","Remove Book","Serch Book"."Save and Exit"])
+menu = st.sidebar.radio("Select an option",["View Library","Add Book","Remove Book","Serch Book","Save and Exit"])
 if menu == "View Library":    
     st.sidebar("Your Library")
     if library:
