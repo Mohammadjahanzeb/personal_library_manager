@@ -35,7 +35,7 @@ elif menu == "Add Book":
     read_status = st.checkbox("Mark as Read")
 
     if st.button("Add Book"):
-        library.append("title":title,"author":author,"year":year,"genre":genre,"read_status":read_status})
+        library.append("title":title,"author":author,"year":year,"genre":genre,"read_status":read_status)
         save_library()
         st.success("Book added successfully!")
         st.rerun()
