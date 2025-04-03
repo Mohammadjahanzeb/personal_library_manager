@@ -27,7 +27,7 @@ if menu == "View Library":
 
 #Add book
 elif menu == "Add Book":
-    st.sidebar("Add a new book")
+    st.sidebar.title("Add a New Book")  
     title = st.text_input("Title")
     author = st.text_input("Author")
     year = st.number_input("Year",min_value=2022, max_value=2100,step=1)
