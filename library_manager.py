@@ -54,9 +54,11 @@ elif menu == "Remove Book":
     if book_titles:
         selected_book = st.selectbox("Select a book to remove", book_titles)
         if st.button("Remove Book"):
-            global library  # Ensure modification of global variable
-            library = [book for book in library if book["title"] != selected_book]
-            save_library()  # Fixed missing ()
+            for book in library:
+                if book["title"] == selected_book:
+                    library.remove(book)  # Modify list in place
+                    break  # Stop loop after removing first match
+            save_library()  # Save changes
             st.success("Book removed successfully!")
             st.rerun()
     else:
